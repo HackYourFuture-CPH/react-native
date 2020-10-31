@@ -1,10 +1,9 @@
-# Week 3 - Advanced react
+# Week 3 - Top level elements
 
 ## Learning goals
-- Forms and events
-- Using data fetching
-- Children
-- Prop types
+- Navigation
+- ScrollView/FlatList
+- Modal
 
 ## Relevant links
 * [Preparation](preparation.md)
