@@ -1,170 +1,42 @@
-# Lesson Plan - Advanced react
+# Lesson Plan - Top level elements
 
-## Forms
-Forms works out of the box exactly like plain html.
+## Navigation
 
-but if we need to handle form submission in javascript and keep track of what data the user enters in the form, then we use [controlled inputs](#controlled-inputs)
+In React Native, we will be using a popular library [mentioned](https://reactnative.dev/docs/navigation/#react-navigation) in the official documentation - [react-navigation](https://reactnavigation.org/). In the end of the section, we will briefly discuss another popular library, which promises native look and feel. 
 
-- Controlled Inputs
-  - Docs [here](https://reactjs.org/docs/forms.html#controlled-components)
-  - Uncontrolled inputs are almost never useful to us
-  - For controlled inputs, we must provide _both_:
-    - The value
-    - The onChange event handler
-  - React controls the state of the input, not the browser
-- Using data fetching
-  - Setting up fetching in `componentDidMount`
-  - Talk about loading states
-- Prop types
-- Children
-  - Make a simple example of using `props.children`. Fx the fancyborder component used in [this example](https://reactjs.org/docs/composition-vs-inheritance.html#containment)
+Navigation in mobile apps usually follows 4 main patterns, which impact types of transitions and serve different purposes.
 
-[Code inspiration](#random-cats)
+### Stack Navigation
 
-## Code inspiration
+Provides a way for your app to transition between screens where each new screen is placed on top of a stack. By default the stack navigator is configured to have the familiar iOS and Android look & feel: new screens slide in from the right on iOS, fade in from the bottom on Android.
 
-### Random cats
+### Full-screen Modal
 
-https://codesandbox.io/s/random-cats-ml92u
+Similar to Stack, but uses a different kind of transition (bottom-top is quite common). Usually displays additional data for the last interaction.
 
-```js
-import React from "react";
-import ReactDOM from "react-dom";
-import PropTypes from "prop-types";
+### Tab Navigation
 
-import "./styles.css";
+The tab bar pattern is inherited from desktop design. It usually contains relatively few destinations, and those destinations are of similar importance and require direct access from anywhere in the app. The tab bar doesn't hide navigation, but allows direct access and presents feedback on the icon it's related to.
 
-function FancyBorder(props) {
-  return <div className="fancy-border">{props.children}</div>;
-}
+### Drawer
 
-class RandomCats extends React.Component {
-  state = { randomCats: [], inputValue: this.props.defaultNumberOfCats };
+Commonly used by Android to display multiple links in mobile navigation, the side drawer reduces UI clutter and prioritizes important navigation destinations. Not to mention, it's super simple to design and fits most mobile app layouts.
 
-  componentDidMount() {
-    this.getCat().then(randomCats => {
-      const newRandomCats = this.state.randomCats.concat(randomCats);
-      this.setState({ randomCats: newRandomCats });
-    });
-  }
+Along with defining the structure and possible transitions, essential to the navigation topic are [passing the data between screens](https://reactnavigation.org/docs/params), [nesting different navigators into each other](https://reactnavigation.org/docs/nesting-navigators) and [using conditional rendering for different flows](https://reactnavigation.org/docs/auth-flow).
 
-  getCat = () => {
-    return fetch(this.props.fetchUrl).then(response =>
-      response.json()
-    );
-  };
+## ScrollView / FlatList
 
-  addCat = () => {
-    this.getCat().then(randomCats => {
-      const newRandomCats = this.state.randomCats.concat(randomCats);
-      this.setState({ randomCats: newRandomCats });
-    });
-  };
+These two components serve a slightly similar purpose in two different ways. [ScrollView](https://reactnative.dev/docs/scrollview) renders all its react child components at once, providing more scrollable space then the screen has. [FlatList](https://reactnative.dev/docs/flatlist) also increases the amount of content possible to be placed on a single screen via rendering similar items. 
+For implementing a FlatList with sections support, React Native provides [SectionList](https://reactnative.dev/docs/sectionlist).
 
-  handleInputChange = event => {
-    const numberOfCats = event.target.value;
-    // Why is this not the best way of doing things??
-    this.setState({
-      inputValue: numberOfCats,
-      randomCats: this.state.randomCats.splice(0, numberOfCats)
-    });
-  };
+## Modal
 
-  render() {
-    return (
-      <div className="App">
-        <input
-          value={this.state.inputValue}
-          onChange={this.handleInputChange}
-          placeholder="Number of cats"
-        />
-        <h1>Random cats!!!!</h1>
-        <button onClick={this.addCat}>Add cat</button>
-        {this.state.randomCats.map(randomCat => {
-          return (
-            <li>
-              <FancyBorder>
-                <img src={randomCat.file} />
-              </FancyBorder>
-            </li>
-          );
-        })}
-      </div>
-    );
-  }
-}
-
-RandomCats.propTypes = {
-  fetchUrl: PropTypes.string,
-  defaultNumberOfCats: PropTypes.number
-};
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(
-  <RandomCats defaultNumberOfCats={2} fetchUrl="https://aws.random.cat/meow" />,
-  rootElement
-);
-
-```
+The [Modal](https://reactnative.dev/docs/modal) component is a basic way to present content above an enclosing view. It is fairly similar to an alert with a bigger room for customization. 
 
 ## Exercise
 
-### Time registration
-Make a site that manages time registration for employees.
+### Chat application skeleton
+Make a top level architecture for a simple chat application (you can use Slack mobile app for inspiration).
 
-#### User stories
-
-##### Submit shift
-As a employee i would like to submit my shift. The shift should include
-- Employee name
-- Start time
-- End time
-
-##### Shift overview
-As an employeer i would like to have an overview of the employee shifts. They should be displayed in a list, showing 
-- Employee name
-- Start time
-- End time
-- Total number of hours
-- Price for shift
-
-##### Total price
-As an employeer i would like to have an overview of the total logged time and the total price for that time.
-
-##### Filter submitted shifts
-As an employeer i would like to filter the shifts based on name.
-
-#### Technical details
-
-All components should have prop types defined.
-
-##### Submit shift
-The submit shift form should come up as a modal. The simplest way to do this is setting the modal to fixed position. 
-
-Use controlled inputs to get the shift information.
-
-Pressing save will add the shift to the shifts overview.
-
-What input type should `start` and `end` be?
-
-##### Shift overview
-To fetch the default shifts, use this api: https://gist.githubusercontent.com/benna100/5fd674171ea528d7cd1d504e9bb0ca6f/raw
-
-When is it we should do fetching in a react component?
-
-Remember loading state when fetching the default shifts.
-
-The shift components should be wrapped in a border component that adds a border to the component being wrapped. Do this using `props.children`.
-
-##### Filter submitted shifts
-Do this again using controlled inputs.
-
-
-#### Mockups
-
-##### Submit shift
-![Submit shift](assets/submit-shift.jpg)
-
-
-##### Shifts overview
-![Submit shift](assets/shifts-overview.jpg)
+Don't pay much attention to neither styling nor content. The idea is to have a navigation with ~5 different screens 
+(tab, drawer, stack), Flat List filled with random names representing chats, and Modal.
