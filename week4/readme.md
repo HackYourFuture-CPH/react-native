@@ -1,8 +1,8 @@
-# Week 4 - Managing state
+# Week 4 - Animations
 
 ## Learning goals
-- Context
-- Render props
+- Animations
+- Gestures
 
 ## Relevant links
 * [Preparation](preparation.md)

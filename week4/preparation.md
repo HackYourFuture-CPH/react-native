@@ -1,3 +1,4 @@
 # Preparation
-- [Context](https://reactjs.org/docs/context.html) (20 min)
-- [Render props](https://reactjs.org/docs/render-props.html) (10 min)
+
+- [Animated](https://reactnative.dev/docs/animated)
+- [How animations work](https://www.freecodecamp.org/news/how-react-native-animations-work/)
