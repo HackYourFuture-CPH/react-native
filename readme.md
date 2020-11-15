@@ -1,7 +1,5 @@
 > Please help us improve and share your feedback! If you find better tutorials
-or links, please share them by [opening a pull request](https://github.com/HackYourFuture-CPH/React/pulls).
-
-TODO: ^^ Change the link!
+or links, please share them by [opening a pull request](https://github.com/HackYourFuture-CPH/react-native/pulls).
 
 # HackYourFuture - React Native
 
