@@ -1,6 +1,6 @@
 # Lesson Plan - Hello, world (and more) in React Native
 
-- Hello, world in React Native
+- Hello world in React Native
 - A general overview of React Native
 - An overview of Expo
 - React for mobile
