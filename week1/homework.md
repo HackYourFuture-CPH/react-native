@@ -30,15 +30,15 @@ Using `expo-cli` create a new react-native project for each of the layouts prese
 
 ### Splash Screen
 
-![Splash screen wireframe](/week1/assets/splash-screen-wireframe.png)
+![Splash screen wireframe](/week1/assets/splash-screen-wireframe.jpg)
 
 ### Onboarding Screen
 
-![Splash screen wireframe](/week1/assets/onoarding-screen-wireframe.png)
+![Splash screen wireframe](/week1/assets/onboarding-screen-wireframe.jpg)
 
 ### Feed
 
-![Splash screen wireframe](/week1/assets/feed-screen-wireframe.png)
+![Splash screen wireframe](/week1/assets/feed-screen-wireframe.jpg)
 
 
 ## Hand in Homework:
