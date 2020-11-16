@@ -1,2 +1,2 @@
 # Preparation
-- [Thinking the react way](https://reactjs.org/docs/thinking-in-react.html) step 1-4 (20 min)
+- [Getting started with react native](https://reactnative.dev/docs/getting-started) - read as far as possible and use the interactive code examples
