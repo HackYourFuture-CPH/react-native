@@ -1,19 +1,10 @@
 # Lesson Plan - Hello, world (and more) in React Native
 
 - Hello, world in React Native
-- [A general overview of React Native]()
-- [An overview of Expo]()
-  - Project structure
-  - The anatomy of a react native application
-  - Functional vs Class components
-  - Styling
-  - Animation
-  - Navigation
-  - Overview of tools and services
-  - Overview of API
-  - Using react native libraries
+- A general overview of React Native
+- An overview of Expo
 - React for mobile
-- [Primitive components]()
+- Primitive components
   - `View`
   - `Text`
   - `Image`
