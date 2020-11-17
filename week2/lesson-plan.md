@@ -1,140 +1,41 @@
-# Lesson Plan - Building components
-- Stateful logic - Having logic around state
+# Lesson Plan
 
-- Create react app
-  - Show students how to install create react app. https://github.com/facebook/create-react-app
-  - Explain the general structure
-  - How to run `npm run start`
-  - Talk briefly about how the dist folder is generated
+This lesson will about practicing
 
-- Component tree
-  - Transform a todolist sketch into components on white board. 
-  - *Exercise:* transform another ui into components in pairs.
-- stateful logic
-  - Using destructuring in React
-  - State vs. Props
-      - Both props and state trigger a render update when they change
-      - How to determine if data should be props or state?
-        - Props are "configuration options" for components
-        - State is completely optional
-        - State increases complexity and reduces predictability
-        - Use props unless you definitely need to use state
-        - State is single-level only. Components can read and set their own state, but cannot read or set the state of their children
-      - Later, we are going to be using a state-management tool
-- Using state correctly
-    - Do not modify state directly, always use setState
-        - Give an example of how mutating state directly doesn’t work
-    - State updates are merged (note that merging is shallow)
-    - setState is an asynchronously-executed _request_ to change state
-- List keys
-  - Render list first without adding the key. See the error
-  - Assignment of unique key to every item rendered in an array
-  - Keys help React identify which items have changed, are added, or are removed
-  - [Index should be avoided](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318)
-  - [Code inspiration](#todolist-updating-state-with-list)
-- Lifecycle Methods
-  - Full list [here](https://reactjs.org/docs/react-component.html)
-    - ![react Lifecycles](assets/react-lifecycles.jpeg)
-  - Lifecycle methods are used when render is not enough on its own
-  - Cover each, giving examples of when they might be useful
-    - componentDidMount: data fetching in client-side-only apps
-    - shouldComponentUpdate: performance debugging
-    - componentWillUnmount: teardown (payment SDKs, intervals, etc)
-    - Question: in which of these lifecycle methods is it OK to call setState? (watch out for stack overflows)
+## Exercises
 
-[Code inspiration](#counter)
+- #### Exercise 1
 
-## Code inspiration
+The classic starter project. Render a square with a background color. Inside of the square render the text "Hello, world".
 
-### todolist (updating state with list)
-https://codesandbox.io/s/simple-todo-list-be9qu
+<img src="./assets/text.png" width="300px" />
 
-```js
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
+- #### Exercise 2
 
-class TodoList extends Component {
-  state = {
-    todos: [
-      {
-        text: "asdllll"
-      },
-      {
-        text: "testsss"
-      }
-    ]
-  };
+An application doesn't bring a lot of value if a user can't interact with it. The most basic form of interaction is capturing a user's tap (or press) on a screen. Using the Button component, capture a tap event and alert "hello".
 
-  componentDidMount() {
-      console.log('componentDidMount');
-  }
+<img src="./assets/alert.png" width="300px" />
 
-  componentDidUpdate() {
-      console.log('componentDidMount');   
-  }
+- #### Exercise 3
 
-  componentWillUnmount() {
-      console.log('componentWillUnmount');
-      
-  }
+Previously we've been exclusively using component from React Native. But what about our creating our own? Build your own `button component` that accepts an `onPress` and `text prop`. Use the `TouchableOpacity` and Text components to accomplish this.
 
-  addTodo = () => {
-    const newItem = { text: "lolol" };
-    const newList = this.state.todos.concat(newItem);
-    this.setState({ todos: newList }, () => {
-        console.log('state has been updated');
-        
-    });
-  };
+<img src="./assets/customComponent.png" width="300px" />
 
-  render() {
-      console.log('render');
-      
-    return (
-      <div className="App">
-        <button onClick={this.addTodo}>Add todo</button>
-        {this.state.todos.map(todo => (
-          <li>{todo.text}</li>
-        ))}
-      </div>
-    );
-  }
-}
+- #### Exercise 4
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<TodoList />, rootElement);
+ If you're familiar with CSS-in-JS you should be able to fall right into styling in React Native as it follows the same principles. Create `3 squares` that are `vertically` and `horizontally centered`. Each square should have a `unique background color` but all shared styles should only be defined once.
 
-```
+ <img src="./assets/styling.png" width="300px" />
 
-## Exercise
+ - #### Exercise 5
 
-### Counter
+Much like you would have an input in HTML, React Native has the `TextInput component`. The big difference between the two is that, with a TextInput, you get no styling with it - you're responsible for it all. Using the `TextInput component` capture a `user's name` and, upon a `button press`, `alert` their `name `back to them. Add some style to the TextInput while you're there.
 
-First understand the code in this component:
+  <img src="./assets/form.png" width="300px" />
 
-```js
-import React from 'react';
+  - #### Exercise 6
 
-class Counter extends React.Component {
-  state = { counter: this.props.initialCounter };
+   Using previous knowledge of building form, create `login` form.
 
-  componentDidMount() {
-    setInterval(() => {
-      this.setState({ counter: this.state.counter + 1 });
-    }, 1000);
-  }
-
-  render() {
-    return <div>
-    {this.state.counter}</div>;
-  }
-}
-
-export default Counter;
-```
-
-Now extend it with the following features:
-- A button that pauses the counter
-  - Clicking it should change the text so it says `start`. Clicking the button now should start the timer again and change the text to `pause`
-- Add a button that decrements the timer
-- Add a button that resets the counter to 0
+  <img src="./assets/example.png" width="300px" />
