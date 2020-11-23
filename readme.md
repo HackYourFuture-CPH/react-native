@@ -81,7 +81,7 @@ All you need is the `expo-cli`, the Expo client on your phone, and an Expo accou
 ## Planning
 | Week | Topic                                                                                                             | Preparation                         | Lesson plan                         | Homework                      |
 | ---- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------- |
-| 1.   | **First app using React Native** <br> React Native Overview <br> Expo <br> React for mobile <br> Basic components | [Preparation](week2/preparation.md) | [Lesson plan](week2/lesson-plan.md) | [Homework](week2/homework.md) |
+| 1.   | **First app using React Native** <br> React Native Overview <br> Expo <br> React for mobile <br> Basic components | [Preparation](week1/preparation.md) | [Lesson plan](week1/lesson-plan.md) | [Homework](week1/homework.md) |
 | 2.   | **Interaction** <br> Button <br> Touch <br> Text <br> Image                                                       | [Preparation](week2/preparation.md) | [Lesson plan](week2/lesson-plan.md) | [Homework](week2/homework.md) |
 | 3.   | **Top level elements** <br> Navigation <br> ScrollView <br> ListView <br> Modal                                   | [Preparation](week3/preparation.md) | [Lesson plan](week3/lesson-plan.md) | [Homework](week3/homework.md) |
 | 4.   | **Animations** <br> React Native Animations <br> Reanimated <br> Gestures                                         | [Preparation](week4/preparation.md) | [Lesson plan](week4/lesson-plan.md) | [Homework](week4/homework.md) |
