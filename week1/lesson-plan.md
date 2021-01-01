@@ -106,7 +106,7 @@ Now you can use it like any other React component.
 *➡️ Now, try this yourself by adding the camera package and using it in your `App.js`*
 
 
-_Note: that while using the managed worflow, avoid adding components that aren't supported by expo._
+_Note: while using the managed workflow, avoid adding components that aren't supported by expo._
 
 
 *[Visit this link to read more about Expo's SDK](https://docs.expo.io/versions/latest/)*
