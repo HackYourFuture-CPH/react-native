@@ -75,7 +75,7 @@ From here on out, what we'll be doing now is building on your knowledge of JavaS
 
 React Native  allows you to build universal React applications. This means that React Native handles all the complex "bridge" code we would have had to build ourselves to talk to native APIs on the iOS and Android platforms. There are a few key differences worth mentioning here:
 
-- We're no longer dealing with the DOM or HTML. So while you'll still use the component-based approach you picked up from React (or similar framework), you'll no longer be dealing with really any browser-based Web APIs or technologies. So no SVG, Canvas, etc. This also means you won't be able to pull in your favorite React module that may allows you to implement some cool feature with any of these technologies.
+- We're no longer dealing with the DOM or HTML. So while you'll still use the component-based approach you picked up from React (or similar framework), you'll no longer be dealing with really any browser-based Web APIs or technologies. So no SVG, Canvas, etc. This also means you won't be able to pull in your favorite React module that may allow you to implement some cool feature with any of these technologies.
 - No more CSS Animations. In fact, we'll deal with a whole new way of styling but still quite familiar if you've used CSS-in-JS frameworks. (You can even use cool options like styled-componets for react native for styling)
 - Navigation works quite differently on native. It's a stack-based navigation that's unlike web. 
 - Native Platforms (quite like browser vendors) have different UI guidelines. This often means you'd need to tailor your design and code to the platform.
