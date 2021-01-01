@@ -109,7 +109,7 @@ Now you can use it like any other React component.
 _Note: that while using the managed worflow, avoid adding components that aren't supported by expo._
 
 
-*[Visit this link to read read more about Expo's SDK](https://docs.expo.io/versions/latest/)*
+*[Visit this link to read more about Expo's SDK](https://docs.expo.io/versions/latest/)*
 
 ## React for mobile
 
