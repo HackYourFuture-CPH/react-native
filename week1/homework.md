@@ -16,32 +16,30 @@ Using the `hyf-homework` repo write this command
 
 `git checkout master` - You are now on the `master` branch
 
-`git checkout -b react/week1`
+`git checkout -b react-native/week1`
 
 This will create and checkout the branch so you are ready make commits to it
 
 [This video](https://www.youtube.com/watch?v=XYlgh9hSWtw) can help. On slack use the #git-support channel to ask questions about git
 
-## Todo list
+## Layouts with flex box
 
-Usign `create-react-app` create a new react project.
+Using `expo-cli` create a new react-native project for each of the layouts presented here:
 
-## basic React & props
+*[Read the layout with Flebox guide on the React Native docs](https://reactnative.dev/docs/flexbox)*
 
-Render a basic static todo list with three items:
+### Splash Screen
 
-```
-Todo List
+![Splash screen wireframe](/week1/assets/splash-screen-wireframe.jpg)
 
-* Get out of bed, Wed Sep 13 2017
-* Brush teeth, Thu Sep 14 2017
-* Eat breakfast, Fri Sep 15 2017
-```
+### Onboarding Screen
 
-For each item render a description and a deadline date. Before you start draw a mockup and identify the components with colours. You have to use more than two components. Think which props the components should take.
+![Splash screen wireframe](/week1/assets/onboarding-screen-wireframe.jpg)
 
-## thinking in React
-go through this section of react official documentation https://reactjs.org/docs/thinking-in-react.html for learning how to think the react way.
+### Feed
+
+![Splash screen wireframe](/week1/assets/feed-screen-wireframe.jpg)
+
 
 ## Hand in Homework:
 

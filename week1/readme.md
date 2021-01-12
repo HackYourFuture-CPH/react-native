@@ -1,14 +1,19 @@
-# Week 1 - Thinking in react
+# Week 1 - Hello, world (and more) in React Native
+
+This week you'll get your hands dirty with React Native code. We'll begin to lay the foundation for the app you'll be able to use on your phone (Android or iOS).
 
 ## Learning goals
-- [Thinking the react way](https://reactjs.org/docs/thinking-in-react.html)
-  - What was initial problem react solves?
-- Understanding the component model
-  - Seeing a website as components
-  - Thinking in abstractions
-  - JSX transition into building components
-- [Props](https://reactjs.org/docs/components-and-props.html)
-- [State](https://reactjs.org/docs/state-and-lifecycle.html) - very basic
+- Hello world in React Native
+- A general overview of React Native
+- An overview of Expo
+- React for mobile
+- Primitive components
+  - `View`
+  - `Text`
+  - `Image`
+  - `ScrollView`
+  - `TextInput`
+- Platform-specific code
 
 ## Relevant links
 * [Preparation](preparation.md)
