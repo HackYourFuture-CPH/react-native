@@ -92,7 +92,7 @@ All you need is the `expo-cli`, the Expo client on your phone, and an Expo accou
 
 The easiest way to start with React Native is [expo](https://expo.io/features). Check [this answer](https://stackoverflow.com/questions/39170622/what-is-the-difference-between-expo-and-react-native) to get the idea about where the library lies in React Native ecosystem. 
 
-Finally, to know see how React Native stands versus Native Development check [this post](https://medium.com/mop-developers/mobile-app-development-react-native-vs-native-ios-android-49c5c168045b)
+Finally, to see how React Native stands versus Native Development check [this post](https://medium.com/mop-developers/mobile-app-development-react-native-vs-native-ios-android-49c5c168045b)
 
 ## Applications built with React Native
 
