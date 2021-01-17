@@ -54,7 +54,7 @@ Since we won't be using the native simulators (XCode or Android Studio), we'll m
 Download the app and sign up for expo (it is free). 
 
 - 🤖 [Android Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent)
-- 🍎 [iOS App Store](https://itunes.com/apps/exponent)
+- 🍎 [iOS App Store](https://apps.apple.com/dk/app/expo-client/id982107779)
 
 ### Running your app
 
