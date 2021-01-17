@@ -62,8 +62,7 @@ Save the file.
 
 You should now see this in your Expo client
 
-![Hello world!](/week1/assets/hello-world.png)
-
+<img src="/week1/assets/hello-world.png" alt="drawing" width="200"/>
 
 And we're off 🚀!
 
