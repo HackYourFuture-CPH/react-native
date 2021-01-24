@@ -1,6 +1,6 @@
 # Lesson Plan
 
-This lesson will about practicing
+This lesson will be about practicing
 
 ## Exercises
 
